@@ -15,11 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
              
-    steps: 
-      - name: 'print folder content before' 
-        run: ls
-        
+    steps:  
       - uses: actions/checkout@v3
 
-      - name: 'print folder content after' 
-        run: ls -a
+      - name: "Login to dockerhub"
+        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+
