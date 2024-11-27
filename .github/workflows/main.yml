@@ -18,5 +18,5 @@ jobs:
     steps: 
       - name: 'Testing github action' 
         run: pwd 
-      - name: 'Testing printing' 
-        run: echo fatma   
+      - name: 'print folder content' 
+        run: ls  
